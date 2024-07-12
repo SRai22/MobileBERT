@@ -2,13 +2,10 @@
 Based on [this MobileBERT repo](https://github.com/gemde001/MobileBERT)
 
 # What is BERT?
-BERT (Bidirectional Encoder Representations from Transformers) is a NLP model from Google AI, published in 2018. BERT can do many things, including what is demoed here: Questions and Answers-> pass any text and ask questions about it. 
+BERT (Bidirectional Encoder Representations from Transformers) is a NLP model from Google AI, published in 2018. </br>
+BERT can do many things, including what is demoed here: Questions and Answers-> pass any text and ask questions about it. 
 
 This demo runs on top of the mobile (lightweight TensorflowLite-based) version. 
-On the demo I just copied the Gameplay info about KSP from wikipedia. 
-
-# Demo
-![demo_gif](./demo.gif)
 
 ## Running the demo locally
 ### install requirements
@@ -25,9 +22,8 @@ and copy it to
 ```
 ./demo/mobilebert/
     + vocab.txt
-    + mobilebert_float_20191023.tflite
+    + mobilebert.tflite
 ```
-and you are all set 😉
 
 ### run server
 ```sh

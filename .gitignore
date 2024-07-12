@@ -109,6 +109,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+bert/
 
 # Spyder project settings
 .spyderproject
@@ -129,5 +130,5 @@ dmypy.json
 .pyre/
 
 # models from Google
-mobilebert_float_20191023.tflite
+mobilebert.tflite
 vocab.txt

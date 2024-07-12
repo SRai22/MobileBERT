@@ -10,7 +10,7 @@ class MobileBERT:
 		self.max_length = 384
 		self.tokenizer = bert.bert_tokenization.FullTokenizer(__file__.replace("__init__.py","vocab.txt"), True)
 		with tf.device('/CPU:0'):
-			self.interpreter = tf.lite.Interpreter(model_path=__file__.replace("__init__.py","mobilebert_float_20191023.tflite"))
+			self.interpreter = tf.lite.Interpreter(model_path=__file__.replace("__init__.py","mobilebert.tflite"))
 			self.interpreter.allocate_tensors()
 			self.input_details = self.interpreter.get_input_details()
 			self.output_details = self.interpreter.get_output_details()

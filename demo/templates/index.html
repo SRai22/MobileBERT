@@ -11,28 +11,19 @@
 <body>
     <h2>MobileBERT</h2>
 
-
     <div>
         Content:
-        <textarea id="content" cols="40" rows="5" maxlength="384"></textarea>
+        <textarea id="content" cols="40" rows="5" maxlength="384">Tesla is a car</textarea>
     </div>
 
     <div>
         Question: <input type="text" id="question" value="What is Tesla?">
-
-
     </div>
-
 
     <div>
         <button onclick="myFunction()">Try it</button>
-
         answer: <span id="answer">None</span>
     </div>
-
-    <!-- Content: <input type="text" id="content" value="Tesla is a car" cols="40" rows="5"> -->
-
-
 
     <script>
         function myFunction() {
@@ -55,12 +46,11 @@
                 .then(response => response.json())
                 .then(data => {
                     console.log('Success:', data);
-                    document.getElementById("answer").innerText = data["answer"]
+                    document.getElementById("answer").innerText = data["answer"];
                 })
                 .catch((error) => {
                     console.error('Error:', error);
                 });
-
         }
     </script>
     <style>
@@ -81,7 +71,6 @@
             border-radius: 4px;
             padding: 12px;
             font-family: Arial, Helvetica, sans-serif;
-
         }
 
         input:focus {
@@ -114,6 +103,4 @@
         }
     </style>
 </body>
-
-
 </html>
