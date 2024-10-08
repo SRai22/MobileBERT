@@ -7,15 +7,15 @@ import time
 class MobileBERT:
     def __init__(self):
         self.max_length = 384
-        vocab_path = __file__.replace("__init__.py", "../model/mobilebert/vocab.txt")
-        self.tokenizer = bert.bert_tokenization.FullTokenizer("../model/mobilebert/vocab.txt", True)
+        vocab_path = __file__.replace("__init__.py", "./model/mobilebert/vocab.txt")
+        self.tokenizer = bert.bert_tokenization.FullTokenizer("./model/mobilebert/vocab.txt", True)
         
         # Initialize OpenVINO Core
         self.core = ov.Core()
         
         # Load the model
-        model_path = __file__.replace("__init__.py", "../model/mobilebert/mobilebert.xml")  # Adjust the path if necessary
-        self.model = self.core.read_model(model="../model/mobilebert/mobilebert.xml")
+        model_path = __file__.replace("__init__.py", "./model/mobilebert/mobilebert.xml")  # Adjust the path if necessary
+        self.model = self.core.read_model(model="./model/mobilebert/mobilebert.xml")
         
         # Compile the model for the integrated GPU
         self.compiled_model = self.core.compile_model(self.model, device_name="GPU")

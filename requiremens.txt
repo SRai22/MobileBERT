@@ -1,6 +1,10 @@
+numpy>=1.16.6,<2.0.0
+openvino>=2024.3.0
+gradio>=4.35.0
+transformers>=4.45.0
+bert-embedding
+wikipedia>=1.14.0
 tensorflow
 bert-for-tf2
-numpy
-wikipedia
 flask
 flask_cors
